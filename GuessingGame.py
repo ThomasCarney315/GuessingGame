@@ -23,10 +23,13 @@ def play():
             try_count += 1
             guess = int(input('Too low. Guess again:  '))
     print(f"You guessed the number in {try_count} trys")
+def main():
+    display_heading()
+    play_or_not = 'y'
+    while play_or_not == 'y':
+        play()
+        play_or_not = input('Play again? (y/n):  ').lower()
+    print('Good Bye')
 
-display_heading()
-play_or_not = 'y'
-while play_or_not == 'y':
-    play()
-    play_or_not = input('Play again? (y/n):  ').lower()
-print('Good Bye')
+if __name__ == "__main__":
+    main()
